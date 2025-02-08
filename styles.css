@@ -16,11 +16,14 @@ body {
 }
 
 .header {
-    background-color: #477bff;
+    background-color: #ffffff;
     color: #fff;
     margin-bottom: 2rem;
     padding: 2rem 1rem;
     text-align: center;
+    z-index: 1000; /* Đảm bảo header hiển thị trên nội dung khác */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Tạo hiệu ứng đổ bóng */
+    border-radius: 25px;
 }
 
 .section {
