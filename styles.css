@@ -1,18 +1,74 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ********************************************* */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
 body {
     background-color: #fff;
     color: #212529;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 200;
     line-height: 1.5;
-    margin: 0;
     text-align: left;
 }
 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     text-align: center;
+    font-weight: bold;
 }
-button, input[type="submit"] {
+
+button{
     background-color: #d9edff;
     border: 1px solid transparent;
     border-radius: 0.25rem;
@@ -21,56 +77,153 @@ button, input[type="submit"] {
     line-height: 1.5;
     padding: 0.375rem 0.75rem;
     text-align: center;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    vertical-align: middle;  
+    vertical-align: middle;
 }
-input[type="text"] {
-    line-height: 1.8;
-    width: 25%;
-}
-input[type="text"]:hover {
-    background-color: #f5f5f5;
-    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
-}
-
 
 header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+footer {
+    margin: 2rem;
+}
+
+header ul {
+    display: flex;
     background-color: #ffffff;
     color: #fff;
-    margin-bottom: 2rem;
-    padding: 2rem 1rem;
     text-align: center;
     z-index: 1000; /* Đảm bảo header hiển thị trên nội dung khác */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Tạo hiệu ứng đổ bóng */
-    border-radius: 25px;
+    border-radius: 0 25px;
     align-items: center;
+    justify-content : center;
 }
 
-
+a {
+    text-decoration: none;
+    color: rgb(61, 99, 86);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 800;
+}
 .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 15px;
+    padding-left: 15px; 
     padding-right: 15px;
+    width: 80%;
+    height: 80%;
 }
 
-.section {
-    padding: 0.5rem 2rem 1rem 2rem;
-}
-
-.section:hover {
-    background-color: #f5f5f5;
-    transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
-}
-
-.headbutton {
-    background-color: #ffffff;
-    font-size: 4rem;
-    max-width: 100%; /* Độ rộng cố định */
-    margin: 0 auto; /* Căn giữa ngang */
-    text-align: center; /* Căn giữa nội dung bên trong */
-}
-
-#logo {
+.logo {
     height: 50px;           /* Điều chỉnh kích thước logo */
 }
+
+header ul li {
+    display: inline-block;
+    margin: auto 1rem;
+}
+
+#mota {
+    text-align: center;
+    font-size: 1rem;
+}
+
+#pageone {
+    width: 100%; /* Chiều rộng 100% màn hình */
+    height: 100vh;
+}
+
+#pageone_left {
+    display: flex;
+    align-content: center;
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+#pageone_left div {
+    width: 20%;
+    height: 50%;
+    background-color: rgb(252, 227, 250);
+    margin: auto auto;
+    position: absolute;
+    top: 50%;  /* Đặt ở giữa theo chiều dọc */
+    left: 35%; /* Đặt ở giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /*Dịch chuyển về đúng trung tâm*/
+    z-index: -10;
+    border-radius: 5%;
+    text-align: center;
+    padding-top: 1rem;
+    display: inline-block;
+}
+
+#pageone_left div p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#mypicture {
+    height: 120px;
+    border:5px #212529 solid;
+    border-radius: 5%;
+}
+
+.logopageone {
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logopageone-1 {
+    display:flex;
+
+
+}
+
+#pageone_right {
+    display: flex;
+    align-content: center;
+    width: 50%;
+    float: right;
+    height: 100%;
+}
+
+#khung {
+    width: 30%;
+    height: 50%;
+    margin: auto auto;
+    position: absolute;
+    top: 50%;  /* Đặt ở giữa theo chiều dọc */
+    left: 60%; /* Đặt ở giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /*Dịch chuyển về đúng trung tâm*/
+    z-index: -10;
+    border-radius: 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;  /* Xếp chồng các phần tử theo chiều dọc */
+    align-items: center;     /* Canh giữa theo chiều ngang */
+    justify-content: center; /* Canh giữa theo chiều dọc */
+}
+
+#pagetwo {
+    width: 100%; /* Chiều rộng 100% màn hình */
+    height: 100vh;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#decord {
+    width: 40%;
+    height: 100%;
+    background-color: rgb(230,218,206);
+    position: absolute;
+    z-index: -100;
+}
+
