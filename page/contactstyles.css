@@ -219,9 +219,10 @@ header ul li {
 
 #decord {
     width: 40%;
-    height: 100%;
+    height: 200%;
     background-color: rgb(230,218,206);
     position: fixed;
+    top: 0;
     z-index: -100;
 }
 
@@ -245,6 +246,7 @@ header ul li {
 
 #cv1 {
     margin-top: 1rem;
+    padding-top: 1rem;
 }
 #cv1 > ul > li{
     font-weight: bold;
@@ -300,4 +302,11 @@ footer {
     display: block;
     float: left;
 }
+#cv1 ul img {
+    height: 50vh;
+    float: left;
+}
 
+#cv1 ul p {
+    margin-top: 2rem;
+}
