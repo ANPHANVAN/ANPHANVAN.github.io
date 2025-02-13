@@ -1,36 +1,25 @@
-
-// TODO: Add code to check answers to questions
-function checkmultiple(event)
-{
-    let button = event.target;
-
-    if ( button.innerHTML == '1 people per 6 sheep')
-        {
-            button.style.backgroundColor = 'Green';
-            button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
-        }
-    else
-        {
-            button.style.backgroundColor = 'Red';
-            button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
-        }
+function loadPage(page) {
+    
+    // Tải nội dung từ file HTML
+    fetch(`page/${page}.html`)
+        .then(response => {
+            // Kiểm tra nếu tải thành công
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            // Chèn nội dung vào thẻ <main>
+            document.getElementById('main-content').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+            document.getElementById('main-content').innerHTML = "<p>Content not found.</p>";
+        });
 }
 
-function checkfree(event)
-{
-    let button = event.target;
-
-    let input = button.parentElement.querySelector('input');
-
-    if (input.value == 'Switzerland')
-    {
-        button.style.backgroundColor = 'Green';
-        button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
-    }
-    else
-    {
-        button.style.backgroundColor = 'Red';
-        button.parentElement.querySelector('.feedback').innerHTML = 'Uncorrect!';
-    }
-}
-
+// Tải trang Home khi vừa vào trang web
+window.onload = function() {
+    loadPage('home');
+};
