@@ -131,8 +131,7 @@ a:hover {
 
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding-left: 15px; 
     padding-right: 15px;
     width: 80%;
@@ -212,6 +211,8 @@ footer {
 }
 /* END FOOTER */
 
+
+/* BEGIN HOME */
 
 #pageone {
     width: 100%; /* Chiều rộng 100% màn hình */
@@ -315,6 +316,58 @@ footer {
     margin: 0.5rem auto;
 }
 
+#cv2_content {
+    display: flex;
+    position: relative;
+}
+
+#home__edu_oject {
+    width: 30%;
+    height: 100%;
+    position: relative;;
+}
+
+#home__edu__thang {
+    width: 3px;
+    height:150px;
+    background-color: #1ae969;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+}
+
+#home__time {
+    width: 40%;
+    position: absolute;
+    left: -6px ;
+}
+
+.home__time_year {
+    display: flex;
+    align-items: center;
+}
+#home__time_year_dot2 {
+    padding-top: 2rem;
+}
+
+#home__time_year_dot3 {
+    padding-top: 3rem;
+}
+
+#edu__content {
+    text-align: left;
+}
+
+#edu__content ul {
+    list-style: circle;
+    list-style-position: inside;
+}
+
+#edu__content p {
+    font-weight: bold;
+    font-size: large;
+}
+
 
 /* this is contact page edit */
 
@@ -383,7 +436,7 @@ footer {
 }
 
 #khungtime {
-    width: 20vw;
+    width: 6%;
     height: 70vh;
     text-align: center;
     position: relative;
@@ -395,10 +448,11 @@ footer {
 
 #khungdoc {
     width: 3px;
-    height:100%;
+    height:87%;
     background-color: #1ae969;
     margin: 0 auto;
     position: absolute;
+    top: 1rem;
 }
 
 .dot {
@@ -411,19 +465,24 @@ footer {
 }
 
 #dot1 {
-    top: 0%;
+    top: 1rem;
 }
 
 #dot2 {
-    bottom: 50%;
+    top: 54%;
 }
 
 .block {
-    width: 40vw;
+    width: 47%;
     height: 70vh;
     text-align: center;
     position: relative;
     float: left;
+}
+
+#setbackground {
+    max-width:fit-content;
+    margin: auto;
 }
 
 .experience p{
@@ -451,4 +510,89 @@ footer {
 #blockright h2 {
     margin: 0;
     text-align: left;
+}
+
+/* activity */
+#activity__content {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__container {
+    text-align: left;
+}
+
+/* certificate */
+#certificate__container {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.certificate__element {
+    text-align: left;
+    margin: 1rem;
+}
+
+.certificate__element ul li {
+    list-style: circle;
+    list-style-position:inside;
+}
+
+
+/* webportfolio */
+#middle {
+    max-width: 90vw;
+    margin: auto;
+    display: block;
+}
+
+#firstpage {
+    width: 100%;
+    height: 85vh;
+    text-align: center;
+}
+
+#firstpage span {
+    font-size: 1.3rem;
+    margin: 1rem 0.5rem;
+}
+
+#live {
+    font-weight: bold;
+}
+
+#firstpage h1 {
+    font-size: 4rem;
+    margin-top: 4rem;
+    padding: 0 10% 0 10%;
+}
+
+#firstpage button {
+    color: #212529;
+    font-size: 2rem;
+    border: 3px solid #212529;
+    border-radius: 100px;
+    padding: 0.8rem;
+}
+
+.web_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10% auto;
+}
+
+.web_block {
+    width: 50%;
+    text-align: center;
+}
+
+#web_container2 .web_block img {
+    width: 400px;      /* Đảm bảo chiều rộng và chiều cao bằng nhau */
+    height: 400px;
+    object-fit: cover; /* Giúp ảnh bao phủ toàn bộ khung hình mà không méo */
+    border-radius: 50%;
 }
