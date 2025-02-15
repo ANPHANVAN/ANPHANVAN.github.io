@@ -603,9 +603,15 @@ footer {
     border-radius: 50%;
 }
 
+/* footer {
+    display: none;
+} */
 
-@media only screen and (max_width:1024px) {
-    #pageone {
+@media only screen and (max_width:767px) {
+    footer {
+        display: none;
+    }
+    main {
         display: none;
     }
 }
