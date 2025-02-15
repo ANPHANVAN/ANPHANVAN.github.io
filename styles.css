@@ -205,7 +205,7 @@ footer {
     text-align: center;
 }
 
-#footer__icon i {
+#footer__icon a i {
     font-size: 2rem;
     margin: 0 2px;
 }
@@ -248,6 +248,12 @@ footer {
     text-align: center;
     font-weight: bold;
 }
+
+#pageone_left div a i {
+    font-size: 2rem;
+    margin: 0 0.3rem;
+}
+
 .mota {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
@@ -398,9 +404,9 @@ footer {
     line-height: 2rem;
 }
 
-#contact__icon i {
+#contact__icon a i {
     font-size: 2rem;
-    margin: 0 15px;
+    margin: 0 5px;
 }
 
 
