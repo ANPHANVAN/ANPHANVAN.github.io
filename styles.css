@@ -602,3 +602,10 @@ footer {
     object-fit: cover; /* Giúp ảnh bao phủ toàn bộ khung hình mà không méo */
     border-radius: 50%;
 }
+
+
+@media only screen and (max_width:1024px) {
+    #pageone {
+        display: none;
+    }
+}
