@@ -116,6 +116,40 @@ header ul {
     justify-content : center;
 }
 
+#menu {
+    display: block;
+    justify-content: center;
+    height: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+#button_father {
+    position: relative;
+    padding: 0;
+    height: 100%;
+    display: none;
+}
+
+#menu__button {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 9rem;
+    top: 2rem;
+    left: -3.3rem;
+    display: none;
+    pointer-events: none;
+}
+
+#button_father:hover ul {
+    display:block;
+    pointer-events: auto;
+}
+
+
+
+
 a {
     text-decoration: none;
     color: rgb(61, 99, 86);
@@ -161,6 +195,7 @@ footer {
     z-index: 500;
     box-shadow: 2px 2px 7px #090b20;
     margin-bottom: 7px;
+    gap: 2rem;
 }
 
 #copyright {
@@ -177,29 +212,21 @@ footer {
 }
 
 #call {
-    width: 10%;
-    height: 20%;
     display: block;
     float: left;
     text-align: center;
 }
 #mail {
-    width: 20%;
-    height: 20%;
     display: block;
     float: left;
     text-align: center;
 }
 #address {
-    width: 20%;
-    height: 20%;
     display: block;
     float: left;
     text-align: center;
 }
 #sociallink {
-    width: 10%;
-    height: 20%;
     display: block;
     float: left;
     text-align: center;
@@ -236,7 +263,7 @@ footer {
     top: 54%;  /* Đặt ở giữa theo chiều dọc */
     left: 30%; /* Đặt ở giữa theo chiều ngang */
     transform: translate(-50%, -50%); /*Dịch chuyển về đúng trung tâm*/
-    border-radius: 5%;
+    border-radius: 40px;
     text-align: center;
     padding-top: 4rem;
     box-shadow: 2px 2px 7px #212529;
@@ -307,7 +334,7 @@ footer {
     width: 50%;
     height: 70vh;
     background-color:rgb(252, 227, 250);
-    border-radius: 10%;
+    border-radius: 50px;
     margin: 5rem auto;
     box-shadow: 2px 2px 7px #212529;
     text-align: center;
@@ -394,7 +421,7 @@ footer {
 }
 
 #contact__cv1 ul img {
-    height: 50vh;
+    width: 40%;
     float:left;
 
 }
@@ -603,15 +630,97 @@ footer {
     border-radius: 50%;
 }
 
+
 /* footer {
     display: none;
 } */
+@media only screen and (max-width:1023px) {
+    #pageone {
+        width: 100%;
+        height: 150vh;
+    }
+    #pageone_left {
+        width: 100%;
+        height:100vh;
+        float: none;
+        margin: 5rem auto;
+    }
+    #pageone_left div {
+        width: 80%;
+        height: fit-content;
+        position: relative;
+        transform: none;
+        top: 1rem;
+        left:0;
+        padding: 2rem;
+    }
+    #mypicture {
+        width: 70%;
+        height: auto;
+        border: 5px #212529 solid;
+        border-radius: 5%;
+    }
+    #pageright {
 
-@media only screen and (max_width:767px) {
-    footer {
+        width: 100%;
+        height: auto;
+        position: relative;
+        transform: none;
+        text-align: center;
+        padding: 0 20%;
+    }
+    .cvcomtainer {
+        height: fit-content;
+    }
+    footer #address {
         display: none;
     }
-    main {
-        display: none;
+    #contact__cv1 {
+        width: 80%;
+    }
+    #contact__cv1 ul img {
+        width: 35%;
+        height: max-content;
+    }  
+    #contact__cv1 ul h2 {
+        font-size: 30px;
+    } 
+}
+
+/* tablet */
+@media only screen and (max-width:1023px) and (min-width:767px) {
+    
+}
+
+/* mobile */
+@media only screen and (max-width: 767px) {
+    #menu {
+        display: block;
+        font-size: 3rem;
+    }
+    
+    #button_father {
+        display: block;
+    }
+
+    .button_menu {
+        display:none;
+    }
+
+    header ul li img {
+        float: left;
+    }
+
+    
+    .cvcomtainer h2 {
+        margin: 0;
+    }
+    #copyright {
+        display:none;
+    }
+
+    /* experience */
+    .experience h2 {
+        font-size: 25px;
     }
 }
