@@ -633,6 +633,9 @@ footer {
     border-radius: 50%;
 }
 
+.oldClass { color: red; }
+.newClass { font-weight: bolder; font-size: 40px;}
+
 
 /* tablet and mobile */
 @media only screen and (max-width:1023px) {
